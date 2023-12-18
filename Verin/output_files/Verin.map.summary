@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Dec 15 11:57:31 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Verin
+Top-level Entity Name : Verin
+Family : Cyclone IV E
+Total logic elements : 1,295
+    Total combinational functions : 739
+    Dedicated logic registers : 1,002
+Total registers : 1002
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 155,648
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

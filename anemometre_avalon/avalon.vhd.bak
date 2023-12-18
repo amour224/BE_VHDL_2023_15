@@ -1,0 +1,151 @@
+llibrary IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+use IEEE.std_logic_arith.all;
+entity avalon is
+port (
+clk_50, chipselect, write_n, reset_n : in std_logic;
+writedata : in std_logic_vector (15 downto 0);
+readdata : out std_logic_vector (15 downto 0);
+address: std_logic_vector (1 downto 0);
+data_valid : out std_logic;
+data_anemometre : out std_logic_vector(7 downto 0));
+end entity;
+
+
+ARCHITECTURE arch_avalon of avalon IS
+--signal freq : std_logic_vector (15 downto 0);
+--signal start_stop : std_logic_vector (15 downto 0);
+--signal continu : std_logic_vector (15 downto 0);
+--signal raz_n : std_logic;
+--signal pwm_on : std_logic;
+
+
+
+begin
+COMPONENT counter2
+	PORT(clk_50 : IN STD_LOGIC;
+		 in_freq : IN STD_LOGIC;
+		 raz_n : IN STD_LOGIC;
+		 frq : OUT  integer range 0 to 255
+	);
+END COMPONENT;
+
+COMPONENT anemo
+	PORT(HZ : IN STD_LOGIC;
+		 clk_50 : IN STD_LOGIC;
+		 continu : IN STD_LOGIC;
+		 start_stop : IN STD_LOGIC;
+		 raz_n : IN STD_LOGIC;
+		 frq : IN  integer range 0 to 255;
+		 data_valid : OUT STD_LOGIC;
+		 data_anemometre : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT diviseur2
+	PORT(clk_50 : IN STD_LOGIC;
+		 hz : OUT STD_LOGIC
+	);
+END COMPONENT;
+
+SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_1 :   integer range 0 to 255;
+
+
+BEGIN 
+hz <= SYNTHESIZED_WIRE_0;
+
+
+
+b2v_inst : counter2
+PORT MAP(clk_50 => clk_50,
+		 in_freq => in_freq,
+		 raz_n => raz_n,
+		 frq => SYNTHESIZED_WIRE_1);
+
+
+b2v_inst1 : anemo
+PORT MAP(HZ => SYNTHESIZED_WIRE_0,
+		 clk_50 => clk_50,
+		 continu => continu,
+		 start_stop => start_stop,
+		 raz_n => raz_n,
+		 frq => SYNTHESIZED_WIRE_1,
+		 data_valid => data_valid,
+		 data_anemometre => data_anemometre);
+
+
+b2v_inst2 : diviseur2
+PORT MAP(clk_50 => clk_50,
+		 hz => SYNTHESIZED_WIRE_0);
+
+--BEGIN
+--
+--divide: process (clk, reset_n)
+--begin
+--if control(0) = '0' then
+--counter <= (others => '0');
+--elsif clk'event and clk = '1' then
+--if control(1) ='1' then
+--if counter >= freq then
+--counter <= (others => '0');
+--else
+--counter <= counter + 1;
+--end if;
+--end if;
+--end if;
+--end process divide;
+--compare: process (clk, reset_n)
+--begin
+--if control(0) = '0' then
+--pwm_on <= '1';
+--elsif clk'event and clk = '1' then
+--if counter >= duty then
+--pwm_on <= '0';
+--elsif counter = 0 then
+--pwm_on <= '1';
+--end if;
+--end if;
+--end process compare;
+--out_pwm <= pwm_on and control(0);
+--
+--
+
+
+
+
+
+-- écriture registres
+process_write: process (clk, reset_n)
+begin
+if reset_n = '0' then
+freq <= (others => '0');
+duty <= (others => '0');
+control <= (others => '0');
+elsif clk'event and clk = '1' then
+if chipselect ='1' and write_n = '0' then
+if address = "00" then
+freq <= writedata;
+end if;
+if address = "01" then
+duty <= writedata;
+end if;
+if address = "10" then
+control <= writedata (1 downto 0);
+end if;
+end if;
+end if;
+end process;
+-- lecture registres
+process_Read:
+PROCESS(address, freq, duty, control)
+BEGIN
+case address is
+when "00" => readdata <= freq ;
+when "01" => readdata <= duty ;
+when "10" => readdata <= X"000"&"00"&control ;
+when others => readdata <= (others => '0');
+end case;
+END PROCESS process_Read ;
+END arch_avalon ;

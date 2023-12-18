@@ -1,0 +1,125 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 656 384)
+	(text "verin_avalon2" (rect 289 -1 345 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 368 20 380)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "bp_external_connection_export" (rect 0 0 123 12)(font "Arial" (font_size 8)))
+		(text "bp_external_connection_export" (rect 4 61 178 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 272 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 101 46 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 272 112)(line_width 1))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "ver_component_0_data_in_beginbursttransfer" (rect 0 0 186 12)(font "Arial" (font_size 8)))
+		(text "ver_component_0_data_in_beginbursttransfer" (rect 4 261 256 272)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 272 272)(line_width 1))
+	)
+	(port
+		(pt 0 152)
+		(output)
+		(text "led_external_connection_export" (rect 0 0 125 12)(font "Arial" (font_size 8)))
+		(text "led_external_connection_export" (rect 4 141 184 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 272 152)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(output)
+		(text "ver_component_0_clk_adc_writeresponsevalid_n" (rect 0 0 199 12)(font "Arial" (font_size 8)))
+		(text "ver_component_0_clk_adc_writeresponsevalid_n" (rect 4 181 268 192)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 272 192)(line_width 1))
+	)
+	(port
+		(pt 0 232)
+		(output)
+		(text "ver_component_0_cs_writeresponsevalid_n" (rect 0 0 178 12)(font "Arial" (font_size 8)))
+		(text "ver_component_0_cs_writeresponsevalid_n" (rect 4 221 238 232)(font "Arial" (font_size 8)))
+		(line (pt 0 232)(pt 272 232)(line_width 1))
+	)
+	(port
+		(pt 0 312)
+		(output)
+		(text "ver_component_0_out_pwm_writeresponsevalid_n" (rect 0 0 205 12)(font "Arial" (font_size 8)))
+		(text "ver_component_0_out_pwm_writeresponsevalid_n" (rect 4 301 268 312)(font "Arial" (font_size 8)))
+		(line (pt 0 312)(pt 272 312)(line_width 1))
+	)
+	(port
+		(pt 0 352)
+		(output)
+		(text "ver_component_0_out_sens_writeresponsevalid_n" (rect 0 0 205 12)(font "Arial" (font_size 8)))
+		(text "ver_component_0_out_sens_writeresponsevalid_n" (rect 4 341 274 352)(font "Arial" (font_size 8)))
+		(line (pt 0 352)(pt 272 352)(line_width 1))
+	)
+	(drawing
+		(text "bp_external_connection" (rect 136 43 404 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 277 67 590 144)(font "Arial" (color 0 0 0)))
+		(text "clk" (rect 257 83 532 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 277 107 572 224)(font "Arial" (color 0 0 0)))
+		(text "led_external_connection" (rect 133 123 404 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 277 147 590 304)(font "Arial" (color 0 0 0)))
+		(text "ver_component_0_clk_adc" (rect 117 163 372 339)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "writeresponsevalid_n" (rect 277 187 674 384)(font "Arial" (color 0 0 0)))
+		(text "ver_component_0_cs" (rect 148 203 404 419)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "writeresponsevalid_n" (rect 277 227 674 464)(font "Arial" (color 0 0 0)))
+		(text "ver_component_0_data_in" (rect 118 243 374 499)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "beginbursttransfer" (rect 277 267 662 544)(font "Arial" (color 0 0 0)))
+		(text "ver_component_0_out_pwm" (rect 107 283 352 579)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "writeresponsevalid_n" (rect 277 307 674 624)(font "Arial" (color 0 0 0)))
+		(text "ver_component_0_out_sens" (rect 107 323 358 659)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "writeresponsevalid_n" (rect 277 347 674 704)(font "Arial" (color 0 0 0)))
+		(text " verin_avalon2 " (rect 592 368 1274 746)(font "Arial" ))
+		(line (pt 272 32)(pt 384 32)(line_width 1))
+		(line (pt 384 32)(pt 384 368)(line_width 1))
+		(line (pt 272 368)(pt 384 368)(line_width 1))
+		(line (pt 272 32)(pt 272 368)(line_width 1))
+		(line (pt 273 52)(pt 273 76)(line_width 1))
+		(line (pt 274 52)(pt 274 76)(line_width 1))
+		(line (pt 273 92)(pt 273 116)(line_width 1))
+		(line (pt 274 92)(pt 274 116)(line_width 1))
+		(line (pt 273 132)(pt 273 156)(line_width 1))
+		(line (pt 274 132)(pt 274 156)(line_width 1))
+		(line (pt 273 172)(pt 273 196)(line_width 1))
+		(line (pt 274 172)(pt 274 196)(line_width 1))
+		(line (pt 273 212)(pt 273 236)(line_width 1))
+		(line (pt 274 212)(pt 274 236)(line_width 1))
+		(line (pt 273 252)(pt 273 276)(line_width 1))
+		(line (pt 274 252)(pt 274 276)(line_width 1))
+		(line (pt 273 292)(pt 273 316)(line_width 1))
+		(line (pt 274 292)(pt 274 316)(line_width 1))
+		(line (pt 273 332)(pt 273 356)(line_width 1))
+		(line (pt 274 332)(pt 274 356)(line_width 1))
+		(line (pt 0 0)(pt 656 0)(line_width 1))
+		(line (pt 656 0)(pt 656 384)(line_width 1))
+		(line (pt 0 384)(pt 656 384)(line_width 1))
+		(line (pt 0 0)(pt 0 384)(line_width 1))
+	)
+)

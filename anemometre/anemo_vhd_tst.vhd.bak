@@ -1,0 +1,50 @@
+LIBRARY ieee;                                               
+USE ieee.std_logic_1164.all;                                
+
+ENTITY anemo_vhd_tst IS
+END anemo_vhd_tst;
+ARCHITECTURE anemo_arch OF anemo_vhd_tst IS
+-- cnstants                                                 
+-- signals                                                   
+SIGNAL continu : STD_LOGIC;
+SIGNAL data_anemometre : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL data_valid : STD_LOGIC;
+SIGNAL frq : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL HZ : STD_LOGIC;
+SIGNAL start_stop : STD_LOGIC;
+COMPONENT anemo
+	PORT (
+	continu : IN STD_LOGIC;
+	data_anemometre : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	data_valid : OUT STD_LOGIC;
+	frq : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+	HZ : IN STD_LOGIC;
+	start_stop : IN STD_LOGIC
+	);
+END COMPONENT;
+BEGIN
+	i1 : anemo
+	PORT MAP (
+-- list connections between master ports and signals
+	continu => continu,
+	data_anemometre => data_anemometre,
+	data_valid => data_valid,
+	frq => frq,
+	HZ => HZ,
+	start_stop => start_stop
+	);
+init : PROCESS                                               
+-- variable declarations                                     
+BEGIN                                                        
+        -- code that executes only once                      
+WAIT;                                                       
+END PROCESS init;                                           
+always : PROCESS                                              
+-- optional sensitivity list                                  
+-- (        )                                                 
+-- variable declarations                                      
+BEGIN                                                         
+        -- code executes for every event on sensitivity list  
+WAIT;                                                        
+END PROCESS always;                                          
+END anemo_arch;

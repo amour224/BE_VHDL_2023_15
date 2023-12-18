@@ -1,0 +1,24 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst avalon_anemo.avalon_anemometre_0 -pg 1 -lvl 3 -y 410
+preplace inst avalon_anemo.bp -pg 1 -lvl 3 -y 30
+preplace inst avalon_anemo -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst avalon_anemo.clk_0 -pg 1 -lvl 2 -y 360
+preplace inst avalon_anemo.in_freq -pg 1 -lvl 3 -y 230
+preplace inst avalon_anemo.cpu.cpu -pg 1
+preplace inst avalon_anemo.cpu -pg 1 -lvl 1 -y 60
+preplace inst avalon_anemo.cpu.clock_bridge -pg 1
+preplace inst avalon_anemo.RAM -pg 1 -lvl 3 -y 330
+preplace inst avalon_anemo.LEDS -pg 1 -lvl 3 -y 510
+preplace inst avalon_anemo.cpu.reset_bridge -pg 1
+preplace inst avalon_anemo.Jtag -pg 1 -lvl 3 -y 130
+preplace netloc POINT_TO_POINT<net_container>avalon_anemo</net_container>(MASTER)cpu.irq,(SLAVE)Jtag.irq) 1 1 2 NJ 150 770
+preplace netloc INTERCONNECT<net_container>avalon_anemo</net_container>(SLAVE)LEDS.reset,(MASTER)cpu.debug_reset_request,(SLAVE)bp.reset,(MASTER)clk_0.clk_reset,(SLAVE)in_freq.reset,(SLAVE)Jtag.reset,(SLAVE)cpu.reset,(SLAVE)RAM.reset1,(SLAVE)clk_0.clk_in_reset,(SLAVE)avalon_anemometre_0.reset) 1 0 3 130 240 490 430 810
+preplace netloc EXPORT<net_container>avalon_anemo</net_container>(SLAVE)avalon_anemo.clk,(SLAVE)clk_0.clk_in) 1 0 2 NJ 370 NJ
+preplace netloc INTERCONNECT<net_container>avalon_anemo</net_container>(SLAVE)Jtag.avalon_jtag_slave,(MASTER)cpu.instruction_master,(SLAVE)avalon_anemometre_0.avalon_slave_0,(SLAVE)bp.s1,(SLAVE)LEDS.s1,(SLAVE)RAM.s1,(SLAVE)cpu.debug_mem_slave,(MASTER)cpu.data_master,(SLAVE)in_freq.s1) 1 0 3 110 200 510 130 830
+preplace netloc EXPORT<net_container>avalon_anemo</net_container>(SLAVE)avalon_anemo.in_freq,(SLAVE)in_freq.external_connection) 1 0 3 NJ 260 NJ 260 NJ
+preplace netloc EXPORT<net_container>avalon_anemo</net_container>(SLAVE)LEDS.external_connection,(SLAVE)avalon_anemo.leds) 1 0 3 NJ 540 NJ 540 NJ
+preplace netloc FAN_OUT<net_container>avalon_anemo</net_container>(MASTER)clk_0.clk,(SLAVE)avalon_anemometre_0.clock,(SLAVE)in_freq.clk,(SLAVE)RAM.clk1,(SLAVE)bp.clk,(SLAVE)Jtag.clk,(SLAVE)cpu.clk,(SLAVE)LEDS.clk) 1 0 3 90 280 NJ 280 790
+preplace netloc EXPORT<net_container>avalon_anemo</net_container>(SLAVE)avalon_anemo.bp,(SLAVE)bp.external_connection) 1 0 3 NJ 220 NJ 220 NJ
+levelinfo -pg 1 0 60 1030
+levelinfo -hier avalon_anemo 70 250 580 870 1020

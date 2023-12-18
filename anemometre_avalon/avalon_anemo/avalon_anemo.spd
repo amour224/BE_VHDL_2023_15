@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/avalon_anemo_RAM.hex"
+   type="HEX"
+   library="RAM" />
+ <file
+   path="simulation/submodules/avalon_anemo_RAM.vhd"
+   type="VHDL"
+   library="RAM" />
+ <file
+   path="simulation/submodules/avalon_anemo_LEDS.vhd"
+   type="VHDL"
+   library="LEDS" />
+ <file
+   path="simulation/submodules/avalon_anemo_Jtag.vhd"
+   type="VHDL"
+   library="Jtag" />
+ <file path="simulation/avalon_anemo.vhd" type="VHDL" />
+ <topLevel name="avalon_anemo" />
+ <deviceFamily name="cycloneive" />
+ <modelMap controllerPath="avalon_anemo.RAM" modelPath="avalon_anemo.RAM" />
+</simPackage>

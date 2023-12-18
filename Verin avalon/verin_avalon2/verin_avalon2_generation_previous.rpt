@@ -1,0 +1,112 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\utilisateur\Desktop\FPGA\Verin_avalon\verin_avalon2.qsys --block-symbol-file --output-directory=C:\Users\utilisateur\Desktop\FPGA\Verin_avalon\verin_avalon2 --family="Cyclone IV E" --part=EP4CE22F17C6
+Progress: Loading Verin_avalon/verin_avalon2.qsys
+Progress: Reading input file
+Progress: Adding bp [altera_avalon_pio 18.1]
+Progress: Parameterizing module bp
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding led [altera_avalon_pio 18.1]
+Progress: Parameterizing module led
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding ver_component_0 [ver_component 1.0]
+Progress: Parameterizing module ver_component_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: verin_avalon2.bp: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: verin_avalon2.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\utilisateur\Desktop\FPGA\Verin_avalon\verin_avalon2.qsys --synthesis=VHDL --output-directory=C:\Users\utilisateur\Desktop\FPGA\Verin_avalon\verin_avalon2\synthesis --family="Cyclone IV E" --part=EP4CE22F17C6
+Progress: Loading Verin_avalon/verin_avalon2.qsys
+Progress: Reading input file
+Progress: Adding bp [altera_avalon_pio 18.1]
+Progress: Parameterizing module bp
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding led [altera_avalon_pio 18.1]
+Progress: Parameterizing module led
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding ver_component_0 [ver_component 1.0]
+Progress: Parameterizing module ver_component_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: verin_avalon2.bp: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: verin_avalon2.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: verin_avalon2: Generating verin_avalon2 "verin_avalon2" for QUARTUS_SYNTH
+Info: bp: Starting RTL generation for module 'verin_avalon2_bp'
+Info: bp:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=verin_avalon2_bp --dir=C:/Users/UTILIS~1/AppData/Local/Temp/alt9335_3316374450882393752.dir/0003_bp_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/UTILIS~1/AppData/Local/Temp/alt9335_3316374450882393752.dir/0003_bp_gen//verin_avalon2_bp_component_configuration.pl  --do_build_sim=0  ]
+Info: bp: Done RTL generation for module 'verin_avalon2_bp'
+Info: bp: "verin_avalon2" instantiated altera_avalon_pio "bp"
+Info: jtag_uart_0: Starting RTL generation for module 'verin_avalon2_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=verin_avalon2_jtag_uart_0 --dir=C:/Users/UTILIS~1/AppData/Local/Temp/alt9335_3316374450882393752.dir/0004_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/UTILIS~1/AppData/Local/Temp/alt9335_3316374450882393752.dir/0004_jtag_uart_0_gen//verin_avalon2_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'verin_avalon2_jtag_uart_0'
+Info: jtag_uart_0: "verin_avalon2" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: led: Starting RTL generation for module 'verin_avalon2_led'
+Info: led:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=verin_avalon2_led --dir=C:/Users/UTILIS~1/AppData/Local/Temp/alt9335_3316374450882393752.dir/0005_led_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/UTILIS~1/AppData/Local/Temp/alt9335_3316374450882393752.dir/0005_led_gen//verin_avalon2_led_component_configuration.pl  --do_build_sim=0  ]
+Info: led: Done RTL generation for module 'verin_avalon2_led'
+Info: led: "verin_avalon2" instantiated altera_avalon_pio "led"
+Info: nios2_gen2_0: "verin_avalon2" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'verin_avalon2_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=verin_avalon2_onchip_memory2_0 --dir=C:/Users/UTILIS~1/AppData/Local/Temp/alt9335_3316374450882393752.dir/0006_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/UTILIS~1/AppData/Local/Temp/alt9335_3316374450882393752.dir/0006_onchip_memory2_0_gen//verin_avalon2_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'verin_avalon2_onchip_memory2_0'
+Info: onchip_memory2_0: "verin_avalon2" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: ver_component_0: "verin_avalon2" instantiated ver_component "ver_component_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "verin_avalon2" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "verin_avalon2" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "verin_avalon2" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'verin_avalon2_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=verin_avalon2_nios2_gen2_0_cpu --dir=C:/Users/UTILIS~1/AppData/Local/Temp/alt9335_3316374450882393752.dir/0010_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/UTILIS~1/AppData/Local/Temp/alt9335_3316374450882393752.dir/0010_cpu_gen//verin_avalon2_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2022.12.09 11:29:21 (*) Starting Nios II generation
+Info: cpu: # 2022.12.09 11:29:21 (*)   Checking for plaintext license.
+Info: cpu: # 2022.12.09 11:29:22 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2022.12.09 11:29:22 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2022.12.09 11:29:22 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2022.12.09 11:29:22 (*)   Plaintext license not found.
+Info: cpu: # 2022.12.09 11:29:22 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2022.12.09 11:29:22 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2022.12.09 11:29:22 (*)   Creating all objects for CPU
+Info: cpu: # 2022.12.09 11:29:24 (*)   Generating RTL from CPU objects
+Info: cpu: # 2022.12.09 11:29:24 (*)   Creating plain-text RTL
+Info: cpu: # 2022.12.09 11:29:26 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'verin_avalon2_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/utilisateur/Desktop/FPGA/Verin_avalon/verin_avalon2/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: verin_avalon2: Done "verin_avalon2" with 24 modules, 37 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

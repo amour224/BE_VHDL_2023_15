@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Nov 27 01:03:48 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Anemometre
+Top-level Entity Name : anemometre2
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 1,096 / 22,320 ( 5 % )
+    Total combinational functions : 635 / 22,320 ( 3 % )
+    Dedicated logic registers : 881 / 22,320 ( 4 % )
+Total registers : 881
+Total pins : 15 / 154 ( 10 % )
+Total virtual pins : 0
+Total memory bits : 26,624 / 608,256 ( 4 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,61 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+
+
+
+entity Gest_PWM is
+
+port (
+clk_50M, raz_n: in std_logic;
+frequence, C_duty : in std_logic_vector (31 downto 0);
+S_PWM : out std_logic
+);
+end entity;
+
+
+
+ARCHITECTURE arch_pwm of Gest_PWM IS
+
+-- signaux relatifs au circuit gestion pwm_nano
+signal counter : std_logic_vector (31 downto 0);
+signal PWM_n : std_logic;
+BEGIN
+
+
+
+
+-- La fréquence: 
+
+FREQ: process (clk_50M, raz_n)
+begin
+
+    if raz_n = '0' then
+		counter <= (others => '0');
+    elsif clk_50M'event and clk_50M = '1' then
+			if counter >= frequence then
+				counter <= (others => '0');
+			else
+       counter <= counter + 1;
+			end if;
+    end if;
+end process FREQ;
+
+-- Le rapport cyclique
+
+DUT: process (clk_50M, raz_n)
+    begin
+    if raz_n = '0' then
+       PWM_n <= '0';
+	 elsif clk_50M'event and clk_50M = '1' then
+		if counter >= C_duty then
+			PWM_n <= '0';
+		else
+			PWM_n <= '1';
+		end if;
+    end if;
+end process DUT;
+
+    S_PWM <= PWM_n;
+
+END arch_gest_pwm ;

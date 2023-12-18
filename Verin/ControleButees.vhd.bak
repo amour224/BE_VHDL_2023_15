@@ -1,0 +1,48 @@
+library ieee;
+Use ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+
+entity ControleButees is
+port (
+	S_PWM : in std_logic;
+	butee_g : in std_logic_vector(11 downto 0);
+	butee_d : in std_logic_vector(11 downto 0);
+	in_sens : in std_logic;
+	angle_barre : in std_logic_vector(11 downto 0);
+	PWM : out std_logic;
+	out_sens : out std_logic;
+	fin_course_g : out std_logic;
+	fin_course_d : out std_logic
+	);
+end entity ControleButees;
+
+
+architecture arch_butees of ControleButees is
+
+begin
+
+process(angle_barre)
+	BEGIN
+		if angle_barre <= butee_g then
+			if in_sens = '0' then
+				PWM <= '0';
+				fin_course_g <= '1';
+			else PWM <= S_PWM;
+			end if;
+		elsif angle_barre >= butee_d then
+			if in_sens = '1' then
+				PWM <= '0';
+				fin_course_d <= '1';
+			else PWM <= S_PWM;	
+			end if;
+		else 
+			PWM <= S_PWM;
+			fin_course_d <= '0';
+			fin_course_g <= '0';
+		end if;
+		
+end process;
+	
+	
+end architecture arch_butees;

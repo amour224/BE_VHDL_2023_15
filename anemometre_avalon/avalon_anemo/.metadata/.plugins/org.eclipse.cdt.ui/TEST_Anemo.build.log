@@ -1,0 +1,9 @@
+11:31:12 **** Incremental Build of configuration Nios II for project TEST_Anemo ****
+make all 
+Info: Building ../TEST_Anemo_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../TEST_Anemo_bsp/
+[BSP build complete]
+[TEST_Anemo build complete]
+
+11:31:13 Build Finished (took 1s.180ms)
+

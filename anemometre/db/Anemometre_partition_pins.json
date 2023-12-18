@@ -1,0 +1,85 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "data_valid",
+					"strict" : false
+				},
+				{
+					"name" : "hz",
+					"strict" : false
+				},
+				{
+					"name" : "data_anemometre[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_anemometre[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_anemometre[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_anemometre[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_anemometre[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_anemometre[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_anemometre[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_anemometre[7]",
+					"strict" : false
+				},
+				{
+					"name" : "continu",
+					"strict" : false
+				},
+				{
+					"name" : "start_stop",
+					"strict" : false
+				},
+				{
+					"name" : "raz_n",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50",
+					"strict" : false
+				},
+				{
+					"name" : "in_freq",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

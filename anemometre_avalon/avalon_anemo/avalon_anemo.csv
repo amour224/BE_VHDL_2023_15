@@ -1,0 +1,30 @@
+# system info avalon_anemo on 2023.12.04.10:40:12
+system_info:
+name,value
+DEVICE,EP4CE22F17C6
+DEVICE_FAMILY,Cyclone IV E
+GENERATION_ID,1701682806
+#
+#
+# Files generated for avalon_anemo on 2023.12.04.10:40:12
+files:
+filepath,kind,attributes,module,is_top
+simulation/avalon_anemo.vhd,VHDL,,avalon_anemo,true
+simulation/submodules/avalon_anemo_Jtag.vhd,VHDL,,avalon_anemo_Jtag,false
+simulation/submodules/avalon_anemo_LEDS.vhd,VHDL,,avalon_anemo_LEDS,false
+simulation/submodules/avalon_anemo_RAM.hex,HEX,,avalon_anemo_RAM,false
+simulation/submodules/avalon_anemo_RAM.vhd,VHDL,,avalon_anemo_RAM,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+avalon_anemo.Jtag,avalon_anemo_Jtag
+avalon_anemo.LEDS,avalon_anemo_LEDS
+avalon_anemo.RAM,avalon_anemo_RAM
+avalon_anemo.avalon_anemometre_0,avalon_anemo_avalon_anemometre_0
+avalon_anemo.bp,avalon_anemo_bp
+avalon_anemo.cpu,avalon_anemo_cpu
+avalon_anemo.in_freq_anemo,avalon_anemo_in_freq_anemo
+avalon_anemo.mm_interconnect_0,avalon_anemo_mm_interconnect_0
+avalon_anemo.irq_mapper,avalon_anemo_irq_mapper
+avalon_anemo.rst_controller,altera_reset_controller

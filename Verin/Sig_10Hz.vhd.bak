@@ -1,0 +1,36 @@
+library ieee;
+Use ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+
+entity Sig_10Hz is
+port (
+	raz_n : in std_logic;
+	S_1M : in std_logic;
+	S_10 : out std_logic);
+end entity Sig_10Hz;
+
+
+architecture arch_div10 of Sig_10Hz is
+signal CNV: std_logic :='0';
+
+begin
+
+process(S_1M)
+	variable counter : integer range 0 to 50000;	
+	BEGIN
+		if raz_n= '0' then
+			counter:=0;
+		elsif S_1M'event and S_1M='1' then
+			counter:= counter +1;
+			if counter =  50000 then
+				CNV <= not CNV;
+				counter:= 0;
+			end if;
+		end if;	
+		
+	S_10 <= CNV;
+end process;
+	
+	
+end architecture arch_div10;

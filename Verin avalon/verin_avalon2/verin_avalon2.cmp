@@ -1,0 +1,13 @@
+	component verin_avalon2 is
+		port (
+			bp_external_connection_export                 : in  std_logic := 'X'; -- export
+			clk_clk                                       : in  std_logic := 'X'; -- clk
+			led_external_connection_export                : out std_logic;        -- export
+			ver_component_0_clk_adc_writeresponsevalid_n  : out std_logic;        -- writeresponsevalid_n
+			ver_component_0_cs_writeresponsevalid_n       : out std_logic;        -- writeresponsevalid_n
+			ver_component_0_data_in_beginbursttransfer    : in  std_logic := 'X'; -- beginbursttransfer
+			ver_component_0_out_pwm_writeresponsevalid_n  : out std_logic;        -- writeresponsevalid_n
+			ver_component_0_out_sens_writeresponsevalid_n : out std_logic         -- writeresponsevalid_n
+		);
+	end component verin_avalon2;
+

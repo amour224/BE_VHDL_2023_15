@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Etudiant/Documents/vhdl koussaimy
+Eblock1
+Z0 w1666093406
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/BE/anemometre
+Z4 8C:/BE/anemometre/Block1.vhd
+Z5 FC:/BE/anemometre/Block1.vhd
+l0
+L24
+Vhh1V_eYgQY:WXDRJMom923
+!s100 ]<XGK4I]QcOQELDh]LI3I0
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1666100203
+!i10b 1
+Z8 !s108 1666100203.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/BE/anemometre/Block1.vhd|
+Z10 !s107 C:/BE/anemometre/Block1.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abdf_type
+R1
+R2
+DEx4 work 6 block1 0 22 hh1V_eYgQY:WXDRJMom923
+l75
+L37
+V8=U:n05VW=H>]P_Tk>[^R0
+!s100 SUO@PVMMA_Ihc>zVQGVKB3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eblock_tb
+Z13 w1666085499
+R1
+R2
+R3
+Z14 8C:/BE/anemometre/block_tb.vhd
+Z15 FC:/BE/anemometre/block_tb.vhd
+l0
+L4
+VQC_ec@27eJDBIKi^OFLeF0
+!s100 TFomDGzo0QkCPUQDa:hXV3
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/BE/anemometre/block_tb.vhd|
+Z17 !s107 C:/BE/anemometre/block_tb.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+Z18 DEx4 work 8 block_tb 0 22 QC_ec@27eJDBIKi^OFLeF0
+l37
+L7
+Z19 VNc3CiFQ6?9XIm:I[La1?l3
+Z20 !s100 [4Pzh4oXPQN@CjodW@GFH0
+R6
+32
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
